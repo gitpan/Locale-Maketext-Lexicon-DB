@@ -1,0 +1,35 @@
+==================================================
+Changes from 2013-01-12 00:00:00 +0000 to present.
+==================================================
+
+---------------------------------------------
+version 1.140120 at 2014-01-12 20:54:18 +0000
+---------------------------------------------
+
+  Change: a992581811c72bfe3f682f67974b820bd11be28f
+  Author: Pete Smith <pete.smith@net-a-porter.com>
+  Date : 2014-01-10 17:41:50 +0000
+
+    Fix tests and pod 
+
+  Change: 1744f76db4c91ec82617b75c3c906043096f1174
+  Author: Pete Smith <pete.smith@net-a-porter.com>
+  Date : 2014-01-09 16:29:05 +0000
+
+    Update pod 
+
+  Change: 24c62cda125fb4b47ed37f21ee9080f4d59aae5a
+  Author: Pete Smith <pete.smith@net-a-porter.com>
+  Date : 2014-01-09 11:20:38 +0000
+
+    Update test and pod 
+
+  Change: 93648e74dbf53ae9df1520018d4d5865f4df4383
+  Author: Pete Smith <pete.smith@net-a-porter.com>
+  Date : 2014-01-08 16:08:07 +0000
+
+    Initial commit 
+
+================
+End of releases.
+================
