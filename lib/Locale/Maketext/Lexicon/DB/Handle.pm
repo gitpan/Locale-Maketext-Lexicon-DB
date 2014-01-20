@@ -1,6 +1,6 @@
 package Locale::Maketext::Lexicon::DB::Handle;
 {
-  $Locale::Maketext::Lexicon::DB::Handle::VERSION = '1.140120';
+  $Locale::Maketext::Lexicon::DB::Handle::VERSION = '1.140200';
 }
 # ABSTRACT: Maketext handle for L<Locale::Maketext::Lexicon::DB>
 
@@ -121,7 +121,7 @@ Locale::Maketext::Lexicon::DB::Handle - Maketext handle for L<Locale::Maketext::
 
 =head1 VERSION
 
-version 1.140120
+version 1.140200
 
 =head1 METHODS
 

@@ -1,6 +1,6 @@
 package Locale::Maketext::Lexicon::DB;
 {
-  $Locale::Maketext::Lexicon::DB::VERSION = '1.140120';
+  $Locale::Maketext::Lexicon::DB::VERSION = '1.140200';
 }
 # ABSTRACT: Dynamically load lexicon from a database table
 
@@ -121,7 +121,7 @@ Locale::Maketext::Lexicon::DB - Dynamically load lexicon from a database table
 
 =head1 VERSION
 
-version 1.140120
+version 1.140200
 
 =head1 SYNOPSIS
 
