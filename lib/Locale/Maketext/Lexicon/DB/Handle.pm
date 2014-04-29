@@ -1,6 +1,6 @@
 package Locale::Maketext::Lexicon::DB::Handle;
 {
-  $Locale::Maketext::Lexicon::DB::Handle::VERSION = '1.140200';
+  $Locale::Maketext::Lexicon::DB::Handle::VERSION = '1.141190';
 }
 # ABSTRACT: Maketext handle for L<Locale::Maketext::Lexicon::DB>
 
@@ -35,17 +35,17 @@ sub _lexicon {
         local $Storable::Eval = 1;
         $lexicon = $self->_parent->cache->get($cache_key);
 
-        DEBUG('Retrieved lexicon from cache')
+        TRACE('Retrieved lexicon from cache')
             if (defined $self->_parent->cache);
     }
 
     unless (keys %{ $lexicon }) {
-        DEBUG('Hitting database for lexicon');
+        TRACE('Hitting database for lexicon');
 
         my $dbh = $self->_parent->dbh;
 
         for my $lang (@{ $self->langs }) {
-            DEBUG('Getting lexicon entries for language ' . $lang);
+            TRACE('Getting lexicon entries for language ' . $lang);
 
             my $lexicon_st = $dbh->prepare(q{
                 SELECT *
@@ -69,7 +69,7 @@ sub _lexicon {
 
         if ($self->_parent->has_cache and keys %{ $lexicon }) {
             local $Storable::Deparse = 1;
-            DEBUG('Storing lexicon in cache');
+            TRACE('Storing lexicon in cache');
             $self->_parent->cache->set($cache_key => $lexicon, $self->_parent->cache_expiry_seconds);
         }
     }
@@ -121,7 +121,7 @@ Locale::Maketext::Lexicon::DB::Handle - Maketext handle for L<Locale::Maketext::
 
 =head1 VERSION
 
-version 1.140200
+version 1.141190
 
 =head1 METHODS
 

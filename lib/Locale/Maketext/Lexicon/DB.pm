@@ -1,6 +1,6 @@
 package Locale::Maketext::Lexicon::DB;
 {
-  $Locale::Maketext::Lexicon::DB::VERSION = '1.140200';
+  $Locale::Maketext::Lexicon::DB::VERSION = '1.141190';
 }
 # ABSTRACT: Dynamically load lexicon from a database table
 
@@ -60,7 +60,7 @@ has language_mappings => (
         @requested_langs = Locale::Maketext->_ambient_langprefs
             unless @requested_langs;
 
-        DEBUG('Languages asked for: ' . join (', ', @requested_langs));
+        TRACE('Languages asked for: ' . join (', ', @requested_langs));
 
         my $langs = [];
         for (@requested_langs) {
@@ -70,7 +70,7 @@ has language_mappings => (
             }
         }
 
-        DEBUG('Lexicon will be searched for languages: ' . join(', ', @{ $langs }) );
+        TRACE('Lexicon will be searched for languages: ' . join(', ', @{ $langs }) );
 
         return Locale::Maketext::Lexicon::DB::Handle->new(
             _parent => $instance,
@@ -99,9 +99,11 @@ sub clear_cache {
 sub _cache_key_for_langs {
     my $self = shift;
 
-    return 'lexicon.' . join(
+    return join(
+        '.',
+        'lexicon',
         $self->lex,
-        '-', @{ shift() }
+        @{ shift() }
     )
 }
 
@@ -121,7 +123,7 @@ Locale::Maketext::Lexicon::DB - Dynamically load lexicon from a database table
 
 =head1 VERSION
 
-version 1.140200
+version 1.141190
 
 =head1 SYNOPSIS
 

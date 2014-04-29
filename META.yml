@@ -29,4 +29,4 @@ requires:
   namespace::autoclean: 0
 resources:
   repository: https://github.com/cubabit/Locale-Maketext-Lexicon-DB.git
-version: 1.140200
+version: 1.141190
