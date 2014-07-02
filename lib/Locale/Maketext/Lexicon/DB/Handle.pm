@@ -1,6 +1,6 @@
 package Locale::Maketext::Lexicon::DB::Handle;
 {
-  $Locale::Maketext::Lexicon::DB::Handle::VERSION = '1.141190';
+  $Locale::Maketext::Lexicon::DB::Handle::VERSION = '1.141830';
 }
 # ABSTRACT: Maketext handle for L<Locale::Maketext::Lexicon::DB>
 
@@ -61,7 +61,6 @@ sub _lexicon {
 
                 my $value   = $lex_entry->{lex_value};
                 $value      =~ tr/\r//d;
-                $value      =~ s/\n/\\n/g;
 
                 $lexicon->{ $key } = Locale::Maketext->_compile($value);
             }
@@ -121,7 +120,7 @@ Locale::Maketext::Lexicon::DB::Handle - Maketext handle for L<Locale::Maketext::
 
 =head1 VERSION
 
-version 1.141190
+version 1.141830
 
 =head1 METHODS
 
